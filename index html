@@ -46,7 +46,7 @@
 /* slide layout */
 .slide {
   width: 100vw;
-  min-height: 100dvh; /* stabil di mobile dengan safe area */
+  min-height: 100dvh;
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -236,6 +236,9 @@ ul, ol { margin-left: 1.2rem; margin-bottom: 1rem; }
         document.documentElement.msRequestFullscreen();
       }
     }
+
+    // tampilkan slide pertama
+    showSlide(current);
 
     document.body.addEventListener("click", () => {
       if (!fullscreenRequested) {
